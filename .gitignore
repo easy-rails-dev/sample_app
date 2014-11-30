@@ -13,6 +13,8 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+
+database.yml
 /tmp
 .project
 .idea
