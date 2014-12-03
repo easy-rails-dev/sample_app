@@ -1,0 +1,13 @@
+<% @user ||= current_user %>
+<div class="stats">
+  <a href="<%= following_user_path(@user) %>">
+    <strong id="following" class="stat">
+      <%= @user.followed_users.count %>
+    </strong> <%= Russian::pluralize(@user.followed_users.count, "читаемый", "читаемых", "читаемых") %>
+  </a>
+  <a href="<%= followers_user_path(@user) %>">
+    <strong id="followers" class="stat">
+      <%= @user.followers.count %>
+    </strong> <%= Russian::pluralize(@user.followers.count, "читающий", "читающих", "читающих") %>
+  </a>
+</div>
